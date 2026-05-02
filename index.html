@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Design switcher portfolio for Divij Jaswal, collecting all themed portfolio variants in one selectable interface."
+    >
+    <title>Divij Jaswal | Portfolio Design Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="switcher-bar" data-accent="persona">
+      <a class="brand" href="persona/index.html" data-open-current>
+        <span class="brand-mark" aria-hidden="true">DJ</span>
+        <span>
+          <strong>Divij Jaswal</strong>
+          <small>Portfolio Designs</small>
+        </span>
+      </a>
+
+      <nav class="design-tabs" aria-label="Select portfolio design" data-design-tabs></nav>
+
+      <div class="switcher-actions">
+        <label class="design-select-label" for="designSelect">Design</label>
+        <select id="designSelect" class="design-select" aria-label="Select portfolio design" data-design-select></select>
+        <a class="open-link" href="persona/index.html" data-open-current>Open</a>
+      </div>
+    </header>
+
+    <main class="preview-shell">
+      <iframe
+        class="design-frame"
+        src="persona/index.html"
+        title="Persona portfolio design preview"
+        data-design-frame
+      ></iframe>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
