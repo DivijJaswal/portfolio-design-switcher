@@ -1,0 +1,312 @@
+:root {
+  --bar-height: 76px;
+  --ink: #f8f4eb;
+  --muted: #b9b2a7;
+  --panel: #171719;
+  --panel-strong: #0d0d0f;
+  --line: #2d2a2c;
+  --accent: #df2637;
+  --accent-soft: rgba(223, 38, 55, 0.22);
+  --focus: #f5d36b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    linear-gradient(90deg, rgba(248, 244, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(248, 244, 235, 0.04) 1px, transparent 1px),
+    #0b0b0c;
+  background-size: 36px 36px;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.switcher-bar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: minmax(190px, 248px) minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  align-items: center;
+  min-height: var(--bar-height);
+  padding: 0.78rem clamp(0.75rem, 2vw, 1.25rem);
+  border-bottom: 1px solid rgba(248, 244, 235, 0.14);
+  background:
+    linear-gradient(135deg, var(--accent-soft), transparent 42%),
+    rgba(13, 13, 15, 0.94);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+  min-width: 0;
+}
+
+.brand-mark {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 46px;
+  aspect-ratio: 1;
+  border: 2px solid rgba(248, 244, 235, 0.86);
+  border-radius: 8px;
+  background: var(--accent);
+  color: #0a0a0b;
+  font-weight: 950;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.brand strong,
+.brand small {
+  display: block;
+  white-space: nowrap;
+}
+
+.brand strong {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.brand small {
+  margin-top: 0.12rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.design-tabs {
+  display: flex;
+  gap: 0.42rem;
+  min-width: 0;
+  padding: 0.25rem;
+  border: 1px solid rgba(248, 244, 235, 0.1);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.design-tab {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 0.68rem 0.78rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 900;
+  line-height: 1;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.design-tab:hover,
+.design-tab:focus-visible {
+  border-color: rgba(248, 244, 235, 0.32);
+  color: var(--ink);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.design-tab.is-active {
+  border-color: rgba(248, 244, 235, 0.42);
+  background: var(--accent);
+  color: #0a0a0b;
+}
+
+.switcher-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.design-select-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.design-select,
+.open-link {
+  min-height: 42px;
+  border: 1px solid rgba(248, 244, 235, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.38);
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.design-select {
+  max-width: 160px;
+  padding: 0 0.65rem;
+}
+
+.open-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.design-select:focus-visible,
+.open-link:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.preview-shell {
+  height: 100%;
+  padding-top: var(--bar-height);
+}
+
+.design-frame {
+  display: block;
+  width: 100%;
+  height: calc(100vh - var(--bar-height));
+  border: 0;
+  background: #0b0b0c;
+}
+
+@media (min-width: 981px) {
+  .design-select-label,
+  .design-select {
+    display: none;
+  }
+}
+
+.switcher-bar[data-accent="persona"] {
+  --accent: #e71837;
+  --accent-soft: rgba(231, 24, 55, 0.2);
+}
+
+.switcher-bar[data-accent="undertale"] {
+  --accent: #ffffff;
+  --accent-soft: rgba(255, 255, 255, 0.16);
+}
+
+.switcher-bar[data-accent="omori"] {
+  --accent: #f6f1dc;
+  --accent-soft: rgba(246, 241, 220, 0.16);
+}
+
+.switcher-bar[data-accent="sanrio"] {
+  --accent: #ff9dc4;
+  --accent-soft: rgba(255, 157, 196, 0.2);
+}
+
+.switcher-bar[data-accent="zelda"] {
+  --accent: #d6ad52;
+  --accent-soft: rgba(214, 173, 82, 0.18);
+}
+
+.switcher-bar[data-accent="fire-emblem"] {
+  --accent: #d8b469;
+  --accent-soft: rgba(216, 180, 105, 0.2);
+}
+
+.switcher-bar[data-accent="nier"] {
+  --accent: #d8d1bb;
+  --accent-soft: rgba(216, 209, 187, 0.16);
+}
+
+.switcher-bar[data-accent="genshin"] {
+  --accent: #67d5e5;
+  --accent-soft: rgba(103, 213, 229, 0.2);
+}
+
+.switcher-bar[data-accent="eight-bit"] {
+  --accent: #45e55f;
+  --accent-soft: rgba(69, 229, 95, 0.2);
+}
+
+.switcher-bar[data-accent="soulsborne"] {
+  --accent: #d1742f;
+  --accent-soft: rgba(209, 116, 47, 0.2);
+}
+
+@media (max-width: 980px) {
+  :root {
+    --bar-height: 126px;
+  }
+
+  .switcher-bar {
+    grid-template-columns: 1fr auto;
+  }
+
+  .design-tabs {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    order: 3;
+  }
+
+  .switcher-actions {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 620px) {
+  :root {
+    --bar-height: 142px;
+  }
+
+  .switcher-bar {
+    grid-template-columns: 1fr;
+    gap: 0.62rem;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .switcher-actions {
+    justify-self: stretch;
+  }
+
+  .design-select {
+    max-width: none;
+    flex: 1;
+  }
+
+  .open-link {
+    flex: 0 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
