@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Divij Jaswal's monochrome archive portfolio: backend engineering, AI tooling, GitHub projects, experience, responsibilities, and contact."
+    >
+    <title>Divij Jaswal | Monochrome Archive Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="signalCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="brand-core" aria-hidden="true"></span>
+        <span>Divij // Archive</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" data-nav>
+        <a href="#records">Records</a>
+        <a href="#loadout">Loadout</a>
+        <a href="#memory">Memory</a>
+        <a href="#support">Support</a>
+        <a href="#transmit">Transmit</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Archive Unit // Oracle MTS II // IIT (ISM) CSE // Bangalore</p>
+          <h1 id="hero-title">Divij Jaswal</h1>
+          <p class="hero-lede">
+            Backend and platform engineer building production APIs, service workflows, automation, and local-LLM
+            research tools with a focus on release confidence, operator safety, and clear feedback loops.
+          </p>
+          <div class="status-row" aria-label="Core strengths">
+            <span><strong>01</strong> APIs</span>
+            <span><strong>02</strong> Ops</span>
+            <span><strong>03</strong> AI</span>
+            <span><strong>04</strong> Cloud</span>
+          </div>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#records">Access Records</a>
+            <a class="button secondary" href="resume.pdf">Resume</a>
+          </div>
+        </div>
+
+        <aside class="archive-shell" aria-label="Profile archive">
+          <div class="signal-map" aria-hidden="true">
+            <span class="node main"></span>
+            <span class="node aux"></span>
+            <span class="node red"></span>
+            <span class="scan-line"></span>
+          </div>
+          <div class="unit-card">
+            <p class="card-label">Unit Profile</p>
+            <div class="glyph-ring">
+              <span>DJ</span>
+            </div>
+            <h2>Platform Operator</h2>
+            <dl>
+              <div>
+                <dt>Class</dt>
+                <dd>Backend / Platform</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>Java, Python, React, OCI</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Production-ready</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </section>
+
+      <section class="profile-strip" aria-label="Profile">
+        <p>
+          Divij builds high-change cloud service workflows, internal tools, and research automation with practical
+          backend depth and a product-minded eye for usable systems.
+        </p>
+      </section>
+
+      <section class="section-block" id="records" aria-labelledby="records-title">
+        <div class="section-heading">
+          <p>Data Records</p>
+          <h2 id="records-title">GitHub Projects</h2>
+        </div>
+
+        <div class="filter-bar" aria-label="Project filters">
+          <button class="filter-button is-active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="ai">AI</button>
+          <button class="filter-button" type="button" data-filter="blockchain">Blockchain</button>
+          <button class="filter-button" type="button" data-filter="react">React</button>
+          <button class="filter-button" type="button" data-filter="frontend">Frontend</button>
+        </div>
+
+        <div class="record-grid" data-project-grid>
+          <article class="record-card" data-category="ai backend">
+            <div class="record-id">001</div>
+            <p class="record-type">AI Research Agent</p>
+            <h3>Ollama Research Agent</h3>
+            <p>
+              Privacy-focused autonomous research assistant using local Ollama models, LangGraph Studio,
+              Tavily/Perplexity search, iterative gap detection, and sourced markdown summaries.
+            </p>
+            <ul>
+              <li>Python</li>
+              <li>LangGraph</li>
+              <li>Ollama</li>
+            </ul>
+            <a href="https://github.com/DivijJaswal/Ollama-Resarch-Agent" target="_blank" rel="noreferrer">View source</a>
+          </article>
+
+          <article class="record-card" data-category="blockchain frontend">
+            <div class="record-id">002</div>
+            <p class="record-type">Blockchain App</p>
+            <h3>Decentralized Voting</h3>
+            <p>
+              Ethereum-based voting system with admin election setup, voter registration and approval, smart contract
+              deployment, MetaMask flow, and results display.
+            </p>
+            <ul>
+              <li>JavaScript</li>
+              <li>Truffle</li>
+              <li>Ethereum</li>
+            </ul>
+            <a href="https://github.com/DivijJaswal/dVoting" target="_blank" rel="noreferrer">View source</a>
+          </article>
+
+          <article class="record-card" data-category="react frontend">
+            <div class="record-id">003</div>
+            <p class="record-type">React App</p>
+            <h3>Keeper App</h3>
+            <p>
+              Componentized note-keeping app using React state, create/delete note flows, and Material UI components
+              for compact frontend interactions.
+            </p>
+            <ul>
+              <li>React</li>
+              <li>Material UI</li>
+              <li>JavaScript</li>
+            </ul>
+            <a href="https://github.com/DivijJaswal/Keeper-App" target="_blank" rel="noreferrer">View source</a>
+          </article>
+
+          <article class="record-card" data-category="frontend">
+            <div class="record-id">004</div>
+            <p class="record-type">Static Frontend</p>
+            <h3>E-Commerce Website</h3>
+            <p>
+              Static storefront concept for The Dude Store, with product navigation, search UI, Bootstrap layout,
+              product cards, and custom visual assets.
+            </p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Bootstrap</li>
+            </ul>
+            <a href="https://github.com/DivijJaswal/E-Commerce-Website" target="_blank" rel="noreferrer">View source</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block loadout-section" id="loadout" aria-labelledby="loadout-title">
+        <div class="section-heading">
+          <p>Loadout</p>
+          <h2 id="loadout-title">Skills</h2>
+        </div>
+        <div class="loadout-grid">
+          <article>
+            <span class="chip code"></span>
+            <h3>Languages</h3>
+            <p>Java, Python, C++, C, JavaScript, TypeScript, SQL</p>
+          </article>
+          <article>
+            <span class="chip api"></span>
+            <h3>Backend</h3>
+            <p>REST APIs, microservices, API design, Dropwizard, Google Guice, Maven, Node.js, Express, Flask</p>
+          </article>
+          <article>
+            <span class="chip data"></span>
+            <h3>AI + Data</h3>
+            <p>LangGraph, LangChain, Ollama, Hugging Face, PyTorch, TensorFlow/Keras, scikit-learn, pandas</p>
+          </article>
+          <article>
+            <span class="chip ops"></span>
+            <h3>Frontend + Ops</h3>
+            <p>React, Redux, React Router, Material UI, Monaco Editor, OCI, Kubernetes, Docker, Playwright, Grafana</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="memory" aria-labelledby="memory-title">
+        <div class="section-heading">
+          <p>Memory Log</p>
+          <h2 id="memory-title">Experience</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span>2025+</span>
+            <p>
+              Oracle Member of Technical Staff II in Bangalore, delivering OneView and Partner API workflows across
+              usage analytics, log access, patching, tenancy validation, vulnerability remediation, and operator safety.
+            </p>
+          </li>
+          <li>
+            <span>2024</span>
+            <p>
+              Oracle Member of Technical Staff, building Partner API and ExaCS maintenance workflows, OneView service
+              and UI foundations, and deployment validation across high-change service workflows.
+            </p>
+          </li>
+          <li>
+            <span>2023</span>
+            <p>
+              Oracle SWE project intern on OneView Impact Statistics, developing REST APIs and UI contributions for
+              better insight workflows and product performance.
+            </p>
+          </li>
+          <li>
+            <span>2020-24</span>
+            <p>
+              B.Tech in Computer Science and Engineering from IIT (ISM) Dhanbad, covering data structures and
+              algorithms, OOP, operating systems, computer networks, DBMS, and software engineering foundations.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section-block support-section" id="support" aria-labelledby="support-title">
+        <div class="section-heading">
+          <p>Support Archives</p>
+          <h2 id="support-title">Positions of Responsibility</h2>
+        </div>
+        <div class="support-grid">
+          <article>
+            <p>Admin</p>
+            <h3>Broke Bibliophiles Delhi</h3>
+            <span>Arranged monthly themed book discussions and virtual book-of-the-month talks.</span>
+          </article>
+          <article>
+            <p>Co-Coordinator</p>
+            <h3>IIT (ISM) Book Club</h3>
+            <span>Arranged monthly book discussions and helped organize an event during Srijan.</span>
+          </article>
+          <article>
+            <p>Executive</p>
+            <h3>IIT (ISM) Chess Club</h3>
+            <span>Organized chess competitions among club members.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block contact-section" id="transmit" aria-labelledby="transmit-title">
+        <div class="section-heading">
+          <p>Transmission</p>
+          <h2 id="transmit-title">Contact</h2>
+        </div>
+        <p>
+          Based in Bangalore, India. Reach out for backend/platform engineering, AI tooling, service workflows, or
+          production automation roles.
+        </p>
+        <div class="contact-row" aria-label="Contact actions">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ellytopas%40gmail.com&su=Portfolio%20Contact"
+            target="_blank"
+            rel="noreferrer"
+          >Email</a>
+          <a href="tel:+91-8766235526">Phone</a>
+          <a href="resume.pdf">Resume</a>
+          <a href="https://github.com/DivijJaswal" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/divij-j-a1692111b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
